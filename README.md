@@ -23,7 +23,7 @@ Would you like to join our community server?
 
 ## Features
 
-- Ability to configure network, graphics fidelity, and UI experience.
+- Ability to configure graphics fidelity, and UI experience.
 - See where your server is currently located (via [ipinfo.io](https://ipinfo.io/) API) (Not working)
 - Able to rejoin your last server after leaving it (broken)
 
@@ -54,5 +54,6 @@ A: It was planned from the beginning, but was canceled for safety reasons.
 
 #### Q: "Roblox logs folder not found"
 A: That means no notification appeared.
+
 
 
