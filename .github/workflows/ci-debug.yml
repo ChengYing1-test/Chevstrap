@@ -32,5 +32,5 @@ jobs:
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
         with:
-          name: debug-apk-${{ github.event.inputs.ref }}
+          name: Chevstrap (Debug)
           path: app/build/outputs/apk/debug/app-debug.apk
