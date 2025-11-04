@@ -7,7 +7,6 @@ on:
         description: 'Branch or tag to build'
         required: true
         default: 'main'
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,28 +23,14 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Cache Gradle
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
-          restore-keys: gradle-${{ runner.os }}
-
       - name: Make Gradle executable
         run: chmod +x ./gradlew
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug
-        
-      - name: Show built APK path
-        run: ls -lh app/build/outputs/apk/debug/
-        
+
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
         with:
           name: debug-apk-${{ github.event.inputs.ref }}
-          path: app/build/outputs/apk/debug/*.apk
-            app/build/outputs/apk/debug/*.apk
-            app/build/outputs/apk/release/*.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
