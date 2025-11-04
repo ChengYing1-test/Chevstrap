@@ -1,4 +1,4 @@
-name: Android Debug Build (manual tag/branch select)
+name: CI (Debug)
 
 on:
   workflow_dispatch:
